@@ -42,3 +42,14 @@ C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Negocio\obj\Debug\netc
 C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.csproj.CopyComplete
 C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.dll
 C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.pdb
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\bin\Debug\netcoreapp2.1\PruebaNet.Negocio.deps.json
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\bin\Debug\netcoreapp2.1\PruebaNet.Negocio.dll
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\bin\Debug\netcoreapp2.1\PruebaNet.Negocio.pdb
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\bin\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\bin\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.csprojAssemblyReference.cache
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.AssemblyInfoInputs.cache
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.AssemblyInfo.cs
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.csproj.CopyComplete
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.dll
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Negocio\obj\Debug\netcoreapp2.1\PruebaNet.Negocio.pdb

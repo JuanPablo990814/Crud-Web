@@ -8483,11 +8483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.WebApi\\PruebaNet.WebApi.csproj",
+      "projectUniqueName": "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.WebApi\\PruebaNet.WebApi.csproj",
       "projectName": "PruebaNet.WebApi",
-      "projectPath": "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.WebApi\\PruebaNet.WebApi.csproj",
+      "projectPath": "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.WebApi\\PruebaNet.WebApi.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.WebApi\\obj\\",
+      "outputPath": "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -8508,8 +8508,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.Negocio\\PruebaNet.Negocio.csproj": {
-              "projectPath": "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.Negocio\\PruebaNet.Negocio.csproj"
+            "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.Negocio\\PruebaNet.Negocio.csproj": {
+              "projectPath": "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.Negocio\\PruebaNet.Negocio.csproj"
             }
           }
         }

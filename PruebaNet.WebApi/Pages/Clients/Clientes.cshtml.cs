@@ -50,7 +50,7 @@ namespace PruebaNet.WebApi
             return RedirectToPage("Clientes");
         }
 
-        //prueba git
+        //prueba para github de que si guarde en los repositorios
         public async Task<IActionResult> OnGetBuscador(int cedula)
         {
             var cliente = await _db.Clientes.FindAsync(cedula);

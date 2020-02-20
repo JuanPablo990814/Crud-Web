@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.Datos\\PruebaNet.Datos.csproj": {}
+    "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.Datos\\PruebaNet.Datos.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.Datos\\PruebaNet.Datos.csproj": {
+    "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.Datos\\PruebaNet.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.Datos\\PruebaNet.Datos.csproj",
+        "projectUniqueName": "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.Datos\\PruebaNet.Datos.csproj",
         "projectName": "PruebaNet.Datos",
-        "projectPath": "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.Datos\\PruebaNet.Datos.csproj",
+        "projectPath": "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.Datos\\PruebaNet.Datos.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Visual Studio\\PruebaNet\\PruebaNet.Datos\\obj\\",
+        "outputPath": "D:\\Documentos\\Visual Studio\\Crud-Web\\PruebaNet.Datos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -38,3 +38,13 @@ C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcor
 C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfo.cs
 C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.dll
 C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.deps.json
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.json
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.dev.json
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.csprojAssemblyReference.cache
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfoInputs.cache
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfo.cs
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+D:\Documentos\Visual Studio\Crud-Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
