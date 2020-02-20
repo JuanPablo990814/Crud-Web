@@ -1,0 +1,135 @@
+﻿@page
+@model PruebaNet.WebApi.ClientesModel
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<br />
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @Model.Mensaje
+    </div>
+}
+
+<br />
+
+<div class="container row">
+    <div class="col-6">
+        <h2 class="text-primary">Lista de Clientes</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-page="ControlClientes" class="btn btn-primary">Añadir Nuevo Cliente</a>
+    </div>
+</div>
+<br />
+<!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
+<!--Boostrap clases "border"-->
+<div class="border">
+    <form method="get">
+
+        <!--div asp-validation se encargar de validar los campos obligatorios-->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="container" style="padding:30px;">
+            <!---->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label>Cedula</label>
+                        @*<input type="submit" value="Buscar Usuario" class="=btn btn-primary form-control">*@
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" placeholder="Escriba la cedula" class="form-control" />
+                    </div>
+                    <span @*asp-validation-for="Clientes.cedula"*@ class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <!---Botones-->
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2 offset-sm-2">
+                    <input type="submit" asp-page-handler="Buscador" asp-for="Clien.cedula" value="Buscar Usuario" class="=btn btn-primary form-control">
+                </div>
+                <div class="col-sm-2">
+                    <a asp-page="/Index" class="btn btn-success form-control">Volver</a>
+                </div>
+
+            </div>
+        </div>
+        <!---->
+
+    </form>
+</div>
+<!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
+
+<br />
+<br />
+
+
+<form method="post">
+
+    @if (Model.Clientes.Count() > 0)
+    {
+        <br /> <br />
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+
+                <th>
+                    Cedula @*@Html.DisplayFor(m => m.Cursos.FirstOrDefault().Nombre);*@
+                </th>
+
+                <th>
+                    Nombre @*@Html.DisplayFor(m => m.Cursos.FirstOrDefault().CantidadClases);*@
+                </th>
+
+                <th>
+                    Email @*@Html.DisplayFor(m => m.Cursos.FirstOrDefault().Precio);*@
+                </th>
+
+                <th>
+                    Telefono
+                </th>
+
+                <th>
+                    Direccion
+                </th>
+
+                <th>
+                    Acciones
+                </th>
+
+                <th>
+
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model.Clientes)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.cedula)</td>
+                    <td>@Html.DisplayFor(m => item.nombres)</td>
+                    <td>@Html.DisplayFor(m => item.email)</td>
+                    <td>@Html.DisplayFor(m => item.telefono)</td>
+                    <td>@Html.DisplayFor(m => item.direccion)</td>
+                    <td>
+                        <button asp-route-id="@item.id" asp-page-handler="Delete" onclick="return confirm('¿Esta seguro de borrar el cliente?')" class="btn btn-danger btn-sm">Borrar</button>
+                    </td>
+                    <td>
+                        <a asp-route-id="@item.id" asp-page="EditarClientes" class="btn btn-success btn-sm">Editar  </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No hay clientes registrados</p>
+    }
+</form>

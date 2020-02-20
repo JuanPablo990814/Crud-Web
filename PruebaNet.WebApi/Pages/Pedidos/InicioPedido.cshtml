@@ -1,0 +1,48 @@
+﻿@page
+@model PruebaNet.WebApi.InicioPedidoModel
+@{
+    ViewData["Title"] = "InicioPedido";
+}
+
+<br />
+<h2 class="text-info">Pedido</h2>
+
+<!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
+<!--Boostrap clases "border"-->
+<div class="border">
+    <form method="post">
+        <!--div asp-validation se encargar de validar los campos obligatorios-->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="container" style="padding:30px;">
+            <!---->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label>Cedula</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input @*asp-for="Clientes.cedula"*@ class="form-control" />
+                    </div>
+                    <span @*asp-validation-for="Clientes.cedula"*@ class="text-danger"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <!---Botones-->
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2 offset-sm-2">
+                    <input type="submit" value="Buscar Usuario" class="=btn btn-primary form-control">
+                </div>
+                <div class="col-sm-2">
+                    <a asp-page="/Index" class="btn btn-success form-control">Volver</a>
+                </div>
+
+            </div>
+        </div>
+        <!---->
+
+    </form>
+</div>
+<!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->

@@ -1,0 +1,116 @@
+﻿@page
+@model PruebaNet.WebApi.ProductosModel
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<br />
+<div class="container row">
+    <div class="col-6">
+        <h2 class="text-primary">Lista de Productos</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-page="AgregarProductos" class="btn btn-primary">Añadir Nuevos Productos</a>
+    </div>
+</div>
+
+<br /><br />
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @Model.Mensaje
+    </div>
+}
+
+<form method="post">
+
+    @if (Model.Productos.Count() > 0)
+    {
+        <br /> <br />
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+
+                <th>
+                    PLU
+                </th>
+
+                <th>
+                    Nombre
+                </th>
+
+                <th>
+                    Descripcion
+                </th>
+
+                <th>
+                    Marca
+                </th>
+
+                <th>
+                    Cantidad
+                </th>
+
+                <th>
+                    Disponible
+                </th>
+
+                <th>
+                    Valor
+                </th>
+
+                <th>
+                    Iva
+                </th>
+
+                <th>
+                    Acciones
+                </th>
+
+                <th>
+
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model.Productos)
+            {
+                var cuadro = string.Empty;
+                //var letra = string.Empty;
+
+                if (item.disponible != "Disponible")
+                {
+                    cuadro = "alert-danger";
+                    //letra = "";
+                }
+
+                //Se puede poner solo tr
+
+                <tr class="@cuadro">
+
+                    <td>@Html.DisplayFor(m => item.plu)</td>
+                    <td>@Html.DisplayFor(m => item.nombre)</td>
+                    <td>@Html.DisplayFor(m => item.descripcion)</td>
+                    <td>@Html.DisplayFor(m => item.marca)</td>
+                    <td>@Html.DisplayFor(m => item.cantidad)</td>
+                    <td>@Html.DisplayFor(m => item.disponible)</td>
+                    <td>@Html.DisplayFor(m => item.valor)</td>
+                    <td>@Html.DisplayFor(m => item.valor_iva)</td>
+                    <td>
+                        <button asp-route-id="@item.plu" asp-page-handler="Delete" onclick="return confirm('¿Esta seguro de borrar el producto?')" class="btn btn-danger btn-sm">Borrar</button>
+                    </td>
+                    <td>
+                        <a asp-route-id="@item.plu" asp-page="EditarProducto" class="btn btn-success btn-sm">Editar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>    No hay productos registrados</p>
+    }
+</form>
+

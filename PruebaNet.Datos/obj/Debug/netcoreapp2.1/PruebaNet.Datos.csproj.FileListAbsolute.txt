@@ -1,0 +1,40 @@
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.deps.json
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfo.cs
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.deps.json
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.json
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.dev.json
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.csprojAssemblyReference.cache
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfo.cs
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet Fail Web\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.deps.json
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.json
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.dev.json
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.csprojAssemblyReference.cache
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfo.cs
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet Fail\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.json
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.dev.json
+C:\Users\User\Desktop\PruebaNet\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.csprojAssemblyReference.cache
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.deps.json
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.json
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.runtimeconfig.dev.json
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\bin\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.csprojAssemblyReference.cache
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.AssemblyInfo.cs
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.dll
+C:\Users\User\Desktop\PruebaNet J Pablo Patiño\PruebaNet.Datos\obj\Debug\netcoreapp2.1\PruebaNet.Datos.pdb
