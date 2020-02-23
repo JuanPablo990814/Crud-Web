@@ -29,7 +29,7 @@
 <!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
 <!--Boostrap clases "border"-->
 <div class="border">
-    <form method="get">
+    <form method="post">
 
         <!--div asp-validation se encargar de validar los campos obligatorios-->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -42,9 +42,11 @@
                         @*<input type="submit" value="Buscar Usuario" class="=btn btn-primary form-control">*@
                     </div>
                     <div class="col-sm-4">
-                        <input type="text" placeholder="Escriba la cedula" class="form-control" />
+                        @*<input type="text" asp-for="Clien.cedula" class="form-control" />*@
+                        <input type="text" name="cedula" placeholder="Escriba la cedula" class="form-control" />
+                        @*<input type="submit" asp-page-handler="Buscador" value="Buscar Usuario" class="=btn btn-primary form-control">*@
                     </div>
-                    <span @*asp-validation-for="Clientes.cedula"*@ class="text-danger"></span>
+                    @*<span asp-validation-for="Clien.cedula" class="text-danger"></span>*@
                 </div>
             </div>
         </div>
@@ -54,7 +56,7 @@
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-2 offset-sm-2">
-                    <input type="submit" asp-page-handler="Buscador" asp-for="Clien.cedula" value="Buscar Usuario" class="=btn btn-primary form-control">
+                    <input type="submit" asp-page-handler="Buscador" value="Buscar Usuario" class="=btn btn-primary form-control">
                 </div>
                 <div class="col-sm-2">
                     <a asp-page="/Index" class="btn btn-success form-control">Volver</a>

@@ -47,5 +47,26 @@ namespace PruebaNet.WebApi
 
             return RedirectToPage("Productos");
         }
+
+        public IActionResult OnPostBuscador(int pluproducto)
+        {
+            ///////Consulta por la cedula
+            var producto = _db.Producto.FirstOrDefault(x => x.plu == pluproducto);
+            int id;
+
+            if (producto != null)
+            {
+                producto.plu = pluproducto;
+                //y devulve la id para iniciar el OnGet de Clientes.cshtml.cs que realiza la consulta de los datos con la id
+
+                id = pluproducto;
+
+                return RedirectToPage("EditarProducto", new { id });
+            }
+
+            Mensaje = "No se ha encontrado registro de la cedula en la base de datos";
+
+            return RedirectToPage("");
+        }
     }
 }

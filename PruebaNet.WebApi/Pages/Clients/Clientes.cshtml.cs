@@ -18,13 +18,9 @@ namespace PruebaNet.WebApi
             _db = db;
         }
 
-        //public Clientes Client { get; set; }
-
         public IEnumerable<Clientes> Clientes { get; set; }
 
-        public Clientes Clien { get; set; }
-
-        [TempData]
+            [TempData]
         public string Mensaje { get; set; }
 
         public async Task OnGet()
@@ -50,26 +46,24 @@ namespace PruebaNet.WebApi
             return RedirectToPage("Clientes");
         }
 
-        //prueba para github de que si guarde en los repositorios
-        public async Task<IActionResult> OnGetBuscador(int cedula)
+        public IActionResult OnPostBuscador(int cedula)
         {
-            var cliente = await _db.Clientes.FindAsync(cedula);
+            ///////Consulta por la cedula
+            var cliente = _db.Clientes.FirstOrDefault(x => x.cedula == cedula);
 
-            if (cliente == null )
+
+            if (cliente != null)
             {
-                Mensaje = "No se encuentra el cliente en la base de datos";
+                cliente.cedula = cedula;
+                //y devulve la id para iniciar el OnGet de Clientes.cshtml.cs que realiza la consulta de los datos con la id
+                //Client.id = cliente.id;
 
-                // para returnar a la pantalla negra return NotFound();
-                return RedirectToPage("Index");
+                return RedirectToPage("EditarClientes", new { cliente.id });
             }
 
-            //cliente.cedula = Client.cedula;
-            //cliente.nombres = Client.nombres;
-            //cliente.email = Client.email;
-            //cliente.telefono = Client.telefono;
-            //cliente.direccion = Client.direccion;
+            Mensaje = "No se ha encontrado registro de la cedula en la base de datos";
 
-            return RedirectToPage("EditarClientes");
+            return RedirectToPage("");
         }
     }
 }
