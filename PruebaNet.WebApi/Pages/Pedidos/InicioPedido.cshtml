@@ -5,8 +5,18 @@
 }
 
 <br />
-<h2 class="text-info">Pedido</h2>
+<h2 class="text-primary">Pedido</h2>
+<br />
 
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @Model.Mensaje
+    </div>
+}
 <!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
 <!--Boostrap clases "border"-->
 <div class="border">
@@ -21,19 +31,20 @@
                         <label>Cedula</label>
                     </div>
                     <div class="col-sm-4">
-                        <input @*asp-for="Clientes.cedula"*@ class="form-control" />
+                        <input name="cedula" class="form-control" />
                     </div>
-                    <span @*asp-validation-for="Clientes.cedula"*@ class="text-danger"></span>
+                    <span class="text-danger"></span>
                 </div>
             </div>
 
         </div>
 
+        @*El asp-page-handler es el nombre del metodo que vamos a llamar*@
         <!---Botones-->
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-2 offset-sm-2">
-                    <input type="submit" value="Buscar Usuario" class="=btn btn-primary form-control">
+                    <input type="submit" asp-page-handler="Buscador" value="Buscar Usuario" class="=btn btn-primary form-control">
                 </div>
                 <div class="col-sm-2">
                     <a asp-page="/Index" class="btn btn-success form-control">Volver</a>
@@ -46,3 +57,70 @@
     </form>
 </div>
 <!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
+<br />
+
+<!--Boostrap clases "border"-->
+<br />
+<h4 class="text-primary">Registro de Pedido</h4>
+<br />
+
+<div class="border">
+    <form method="post">
+        <!--div asp-validation se encargar de validar los campos obligatorios-->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="container" style="padding:30px;">
+            <!---->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Pedidos.persona_recibe"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="Pedidos.persona_recibe" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Pedidos.persona_recibe" class="text-danger"></span>
+                </div>
+            </div>
+            <!---->
+            <!---->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Pedidos.observaciones_gene"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="Pedidos.observaciones_gene" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Pedidos.observaciones_gene" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="Pedidos.valor_total"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="Pedidos.valor_total" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Pedidos.valor_total" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <!---Botones-->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2 offset-sm-2">
+                        <input type="submit" value="Guardar" class="=btn btn-primary form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <a asp-page="Productos" class="btn btn-success form-control">Volver</a>
+                    </div>
+
+                </div>
+            </div>
+            <!---->
+        </div>
+    </form>
+</div>
