@@ -5,7 +5,24 @@
 }
 
 <br />
-<h2 class="text-primary">Pedido</h2>
+<div class="container row">
+
+    <div class="col-6">
+        <h2 class="text-primary">Pedido</h2>
+    </div>
+
+    <div class="col-6  text-right">
+        @if (Model.formulario == true)
+        {
+
+        }
+        else
+        {
+            <a asp-page="/Index" class="btn btn-success">Volver</a>
+        }
+    </div>
+
+</div>
 <br />
 
 @if (Model.Mensaje != null)
@@ -31,41 +48,53 @@
                         <label>Cedula</label>
                     </div>
                     <div class="col-sm-4">
-                        <input name="cedula" class="form-control" />
+                        @if (Model.formulario == true)
+                        {
+                            <input name="cedula" class="form-control" disabled="disabled" />
+                        }
+                        else
+                        {
+                            <input name="cedula" class="form-control" />
+                        }
+
                     </div>
-                    <span class="text-danger"></span>
+
+                    <div class="col-sm-3">
+                        <input type="submit" asp-page-handler="Buscador" value="Buscar Usuario" class="=btn btn-primary form-control">
+                    </div>
                 </div>
             </div>
-
         </div>
-
-        @*El asp-page-handler es el nombre del metodo que vamos a llamar*@
-        <!---Botones-->
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2 offset-sm-2">
-                    <input type="submit" asp-page-handler="Buscador" value="Buscar Usuario" class="=btn btn-primary form-control">
-                </div>
-                <div class="col-sm-2">
-                    <a asp-page="/Index" class="btn btn-success form-control">Volver</a>
-                </div>
-
-            </div>
-        </div>
-        <!---->
 
     </form>
 </div>
 <!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
 <br />
 
-<!--Boostrap clases "border"-->
+
+@if (Model.formulario == true)
+{
+
+}
+
 <br />
-<h4 class="text-primary">Registro de Pedido</h4>
+<div class="container row">
+
+    <div class="col-5">
+    </div>
+
+    <div>
+        <h4 class="text-primary">Registro de Pedido</h4>
+    </div>
+
+</div>
 <br />
 
+<!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
+<!--Boostrap clases "border"-->
 <div class="border">
     <form method="post">
+
         <!--div asp-validation se encargar de validar los campos obligatorios-->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="container" style="padding:30px;">
@@ -73,54 +102,136 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-sm-2">
-                        <label asp-for="Pedidos.persona_recibe"></label>
+                        <label>Codigo PLU</label>
                     </div>
                     <div class="col-sm-4">
-                        <input asp-for="Pedidos.persona_recibe" class="form-control" />
+                        <input type="text" asp-for="Producto.plu" name="pluproducto" placeholder="Escriba el PLU del Producto" class="form-control" />
                     </div>
-                    <span asp-validation-for="Pedidos.persona_recibe" class="text-danger"></span>
-                </div>
-            </div>
-            <!---->
-            <!---->
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <label asp-for="Pedidos.observaciones_gene"></label>
+                    <div class="col-sm-3">
+                        <input type="submit" asp-page-handler="AggProducto" value="Buscar Producto" class="=btn btn-primary form-control">
                     </div>
-                    <div class="col-sm-4">
-                        <input asp-for="Pedidos.observaciones_gene" class="form-control" />
-                    </div>
-                    <span asp-validation-for="Pedidos.observaciones_gene" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <label asp-for="Pedidos.valor_total"></label>
-                    </div>
-                    <div class="col-sm-4">
-                        <input asp-for="Pedidos.valor_total" class="form-control" />
-                    </div>
-                    <span asp-validation-for="Pedidos.valor_total" class="text-danger"></span>
-                </div>
-            </div>
-
-
-            <!---Botones-->
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-sm-2 offset-sm-2">
-                        <input type="submit" value="Guardar" class="=btn btn-primary form-control">
+                    <div class="col-sm-1">
                     </div>
                     <div class="col-sm-2">
-                        <a asp-page="Productos" class="btn btn-success form-control">Volver</a>
+                        <a asp-page="InicioPedido" class="btn btn-danger form-control">Cancelar</a>
                     </div>
 
                 </div>
             </div>
-            <!---->
+        </div>
+
+
+    </form>
+</div>
+
+<div class="border">
+    <form method="post">
+        <div class="container" style="padding:30px;">
+            <div class="form-group">
+                <div class="row">
+
+                    <div class="col-sm-2">
+                        <label>Plu</label>
+                        <input asp-for="Producto.plu" class="form-control" disabled="disabled"/>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Nombre</label>
+                        <input asp-for="Producto.nombre" class="form-control" disabled="disabled"/>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Descripcion</label>
+                        <input asp-for="Producto.descripcion" class="form-control" disabled="disabled"/>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Marca</label>
+                        <input asp-for="Producto.marca" class="form-control" disabled="disabled" />
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Cantidad</label>
+                        <input name="cantidaddeseada" class="form-control"/>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Disponibilidad</label>
+                        <select asp-for="Producto.disponible" class="form-control" disabled="disabled">
+                            <option value="" disabled selected>--Seleccione un estado--</option>
+                            <option value="Disponible">Disponible</option>
+                            <option value="No Disponible">No Disponible</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Valor</label>
+                        <input asp-for="Producto.valor" class="form-control" disabled="disabled"/>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label>Valor Iva</label>
+                        <input asp-for="Producto.valor_iva" class="form-control" disabled="disabled" />
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 </div>
+
+<!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
+@*
+    <!--Boostrap clases "border"-->
+    <br />
+    <h4 class="text-primary">Registro de Pedido</h4>
+    <br />
+
+    <div class="border">
+        <form method="post">
+            <!--div asp-validation se encargar de validar los campos obligatorios-->
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container" style="padding:30px;">
+                <!---->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label>Persona que recibe</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input name="personare" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Pedidos.persona_recibe" class="text-danger"></span>
+                    </div>
+                </div>
+                <!---->
+                <!---->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label>Observaciones generales</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input name="obgenerales" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Pedidos.observaciones_gene" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <!---Botones-->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 offset-sm-2">
+                            <input type="submit" value="Guardar" class="=btn btn-primary form-control">
+                        </div>
+                        <div class="col-sm-2">
+                            <a asp-page="Productos" class="btn btn-success form-control">Volver</a>
+                        </div>
+
+                    </div>
+                </div>
+                <!---->
+            </div>
+        </form>
+    </div>
+*@
