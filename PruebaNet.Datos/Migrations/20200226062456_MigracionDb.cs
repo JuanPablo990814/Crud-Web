@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PruebaNet.Datos.Migrations
 {
-    public partial class migracionDB : Migration
+    public partial class MigracionDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -67,6 +67,36 @@ namespace PruebaNet.Datos.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Temporal",
+                columns: table => new
+                {
+                    id_temp = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    id_client = table.Column<int>(nullable: true),
+                    plu = table.Column<int>(nullable: true),
+                    cantidad = table.Column<int>(nullable: false),
+                    valor_total_producto = table.Column<double>(nullable: false),
+                    nombreprod = table.Column<string>(nullable: true),
+                    valor_producto = table.Column<double>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Temporal", x => x.id_temp);
+                    table.ForeignKey(
+                        name: "FK_Temporal_tblClientes_id_client",
+                        column: x => x.id_client,
+                        principalTable: "tblClientes",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Temporal_tblProducto_plu",
+                        column: x => x.plu,
+                        principalTable: "tblProducto",
+                        principalColumn: "plu",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "tblProductos_Pedidos",
                 columns: table => new
                 {
@@ -106,12 +136,25 @@ namespace PruebaNet.Datos.Migrations
                 name: "IX_tblProductos_Pedidos_plu",
                 table: "tblProductos_Pedidos",
                 column: "plu");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Temporal_id_client",
+                table: "Temporal",
+                column: "id_client");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Temporal_plu",
+                table: "Temporal",
+                column: "plu");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "tblProductos_Pedidos");
+
+            migrationBuilder.DropTable(
+                name: "Temporal");
 
             migrationBuilder.DropTable(
                 name: "tblPedidos");

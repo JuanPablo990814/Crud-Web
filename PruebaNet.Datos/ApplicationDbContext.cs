@@ -17,5 +17,7 @@ namespace PruebaNet.Datos
         public DbSet<Producto> Producto { get; set; }
 
         public DbSet<Produtos_Pedidos> Productos_Pedidos { get; set; }
+
+        public DbSet<Productos_Pedidos_Temp> Temporal { get; set; }
     }
 }

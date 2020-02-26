@@ -40,6 +40,12 @@
     <form method="post">
         <!--div asp-validation se encargar de validar los campos obligatorios-->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.formulario == true)
+        {
+
+            <input type="text" name="lol" value="@Model.idcliente" disabled="disabled" />
+        }
+
         <div class="container" style="padding:30px;">
             <!---->
             <div class="form-group">
@@ -74,110 +80,196 @@
 
 @if (Model.formulario == true)
 {
+    <br />
+    <div class="container row">
 
+        <div class="col-5">
+        </div>
+
+        <div>
+            <h4 class="text-primary">Registro de Pedido</h4>
+        </div>
+
+    </div>
+    <br />
+
+    <!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
+    <!--Boostrap clases "border"-->
+    <div class="border">
+        <form method="post">
+            @if (Model.formulario == true)
+            {
+
+                <input type="text" name="numcliente" value="@Model.idcliente" />
+            }
+            <!--div asp-validation se encargar de validar los campos obligatorios-->
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container" style="padding:30px;">
+                <!---->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label>Codigo PLU</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" name="pluproducto" placeholder="Escriba el PLU del Producto" class="form-control" />
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="submit" asp-page-handler="BProducto" value="Buscar Producto" class="=btn btn-primary form-control">
+                        </div>
+                        <div class="col-sm-1">
+                        </div>
+                        <div class="col-sm-2">
+                            <a asp-page="InicioPedido" class="btn btn-danger form-control">Cancelar</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div class="border">
+        <form method="post">
+            <div class="container" style="padding:30px;">
+
+                @if (Model.formulario == true)
+                {
+
+                    <input type="text" name="numcliente" value="@Model.idcliente" />
+                    <input type="text" name="numplu" value="@Model.idplu" />
+                }
+
+                <div class="form-group">
+                    <div class="row">
+
+                        <div class="col-sm-2">
+                            <label>Plu</label>
+                            <input asp-for="Producto.plu" class="form-control" disabled="disabled" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label>Nombre</label>
+                            <input asp-for="Producto.nombre" name="nombreprod" class="form-control" readonly="readonly" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label>Descripcion</label>
+                            <input asp-for="Producto.descripcion" class="form-control" disabled="disabled" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label>Marca</label>
+                            <input asp-for="Producto.marca" class="form-control" disabled="disabled" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label>Cantidad</label>
+                            <input name="cantidad" class="form-control" />
+                            <span asp-validation-for="Temporal.cantidad"></span>
+
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label>Disponibilidad</label>
+                            <select asp-for="Producto.disponible" class="form-control" disabled="disabled">
+                                <option value="" disabled selected>--Seleccione un estado--</option>
+                                <option value="Disponible">Disponible</option>
+                                <option value="No Disponible">No Disponible</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label>Valor</label>
+                            <input asp-for="Producto.valor" name="valor" class="form-control" readonly="readonly" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label>Valor Iva</label>
+                            <input asp-for="Producto.valor_iva" class="form-control" disabled="disabled" />
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-sm-12">
+                    <input type="submit" asp-page-handler="AggProducto" value="Agregar Producto" class="=btn btn-success form-control">
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <form method="post">
+
+        @if (Model.TemporalInum.Count() > 0)
+        {
+            <br /> <br />
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+
+                    <th>
+                        Numero de Pedido
+                    </th>
+
+                    <th>
+                        Plu
+                    </th>
+
+                    <th>
+                        Nombre
+                    </th>
+
+                    <th>
+                        Cantidad
+                    </th>
+
+                    <th>
+                        Valor x Producto
+                    </th>
+
+                    <th>
+                        Total x Productos
+                    </th>
+
+                    <th>
+                        Acciones
+                    </th>
+
+                </tr>
+                @foreach (var item in Model.TemporalInum)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(m => item.id_temp)</td>
+                        <td>@Html.DisplayFor(m => item.plu)</td>
+                        <td>@Html.DisplayFor(m => item.nombreprod)</td>
+                        <td>@Html.DisplayFor(m => item.cantidad)</td>
+                        <td>@Html.DisplayFor(m => item.valor_producto)</td>
+                        <td>@Html.DisplayFor(m => item.valor_total_producto)</td>
+                        <td>
+                            @*<button asp-route-id="@item.id" asp-page-handler="Delete" onclick="return confirm('¿Esta seguro de borrar el cliente?')" class="btn btn-danger btn-sm">Borrar</button>*@
+                        </td>
+                        <td>
+                            @*<a asp-route-id="@item.id" asp-page="EditarClientes" class="btn btn-success btn-sm">Editar  </a>*@
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>No hay productos añadidos</p>
+        }
+    </form>
 }
 
-<br />
-<div class="container row">
-
-    <div class="col-5">
-    </div>
-
-    <div>
-        <h4 class="text-primary">Registro de Pedido</h4>
-    </div>
-
-</div>
-<br />
-
-<!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
-<!--Boostrap clases "border"-->
-<div class="border">
-    <form method="post">
-
-        <!--div asp-validation se encargar de validar los campos obligatorios-->
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="container" style="padding:30px;">
-            <!---->
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <label>Codigo PLU</label>
-                    </div>
-                    <div class="col-sm-4">
-                        <input type="text" asp-for="Producto.plu" name="pluproducto" placeholder="Escriba el PLU del Producto" class="form-control" />
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="submit" asp-page-handler="AggProducto" value="Buscar Producto" class="=btn btn-primary form-control">
-                    </div>
-                    <div class="col-sm-1">
-                    </div>
-                    <div class="col-sm-2">
-                        <a asp-page="InicioPedido" class="btn btn-danger form-control">Cancelar</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
 
-    </form>
-</div>
-
-<div class="border">
-    <form method="post">
-        <div class="container" style="padding:30px;">
-            <div class="form-group">
-                <div class="row">
-
-                    <div class="col-sm-2">
-                        <label>Plu</label>
-                        <input asp-for="Producto.plu" class="form-control" disabled="disabled"/>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label>Nombre</label>
-                        <input asp-for="Producto.nombre" class="form-control" disabled="disabled"/>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label>Descripcion</label>
-                        <input asp-for="Producto.descripcion" class="form-control" disabled="disabled"/>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label>Marca</label>
-                        <input asp-for="Producto.marca" class="form-control" disabled="disabled" />
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label>Cantidad</label>
-                        <input name="cantidaddeseada" class="form-control"/>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label>Disponibilidad</label>
-                        <select asp-for="Producto.disponible" class="form-control" disabled="disabled">
-                            <option value="" disabled selected>--Seleccione un estado--</option>
-                            <option value="Disponible">Disponible</option>
-                            <option value="No Disponible">No Disponible</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label>Valor</label>
-                        <input asp-for="Producto.valor" class="form-control" disabled="disabled"/>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label>Valor Iva</label>
-                        <input asp-for="Producto.valor_iva" class="form-control" disabled="disabled" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
 
 <!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
 @*

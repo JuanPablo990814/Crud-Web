@@ -100,7 +100,7 @@
                     <div class="col-sm-4">
                         <input asp-for="Producto.valor_iva" class="form-control" />
                     </div>
-                    <span class="text-danger"></span>
+                    <span asp-validation-for="Producto.valor_iva" class="text-danger"></span>
                 </div>
             </div>
 

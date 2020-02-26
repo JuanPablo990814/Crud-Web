@@ -10,8 +10,8 @@ using PruebaNet.Datos;
 namespace PruebaNet.Datos.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200218001218_migracionDB")]
-    partial class migracionDB
+    [Migration("20200226062456_MigracionDb")]
+    partial class MigracionDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -92,6 +92,33 @@ namespace PruebaNet.Datos.Migrations
                     b.ToTable("tblProducto");
                 });
 
+            modelBuilder.Entity("PruebaNet.Datos.Productos_Pedidos_Temp", b =>
+                {
+                    b.Property<int>("id_temp")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("cantidad");
+
+                    b.Property<int?>("id_client");
+
+                    b.Property<string>("nombreprod");
+
+                    b.Property<int?>("plu");
+
+                    b.Property<double>("valor_producto");
+
+                    b.Property<double>("valor_total_producto");
+
+                    b.HasKey("id_temp");
+
+                    b.HasIndex("id_client");
+
+                    b.HasIndex("plu");
+
+                    b.ToTable("Temporal");
+                });
+
             modelBuilder.Entity("PruebaNet.Datos.Produtos_Pedidos", b =>
                 {
                     b.Property<int>("id")
@@ -116,6 +143,17 @@ namespace PruebaNet.Datos.Migrations
                     b.HasOne("PruebaNet.Datos.Clientes", "clientes")
                         .WithMany()
                         .HasForeignKey("ced");
+                });
+
+            modelBuilder.Entity("PruebaNet.Datos.Productos_Pedidos_Temp", b =>
+                {
+                    b.HasOne("PruebaNet.Datos.Clientes", "clientes")
+                        .WithMany()
+                        .HasForeignKey("id_client");
+
+                    b.HasOne("PruebaNet.Datos.Producto", "producto")
+                        .WithMany()
+                        .HasForeignKey("plu");
                 });
 
             modelBuilder.Entity("PruebaNet.Datos.Produtos_Pedidos", b =>

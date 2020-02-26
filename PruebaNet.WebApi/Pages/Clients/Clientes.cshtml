@@ -5,6 +5,17 @@
 }
 
 <br />
+<div class="container row">
+    <div class="col-6">
+        <h2 class="text-primary">Lista de Clientes</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-page="ControlClientes" class="btn btn-primary">Añadir Nuevo Cliente</a>
+    </div>
+</div>
+<br />
+
+<br />
 @if (Model.Mensaje != null)
 {
     <div class="alert alert-info alert-dismissible" role="alert">
@@ -15,17 +26,6 @@
     </div>
 }
 
-<br />
-
-<div class="container row">
-    <div class="col-6">
-        <h2 class="text-primary">Lista de Clientes</h2>
-    </div>
-    <div class="col-6 text-right">
-        <a asp-page="ControlClientes" class="btn btn-primary">Añadir Nuevo Cliente</a>
-    </div>
-</div>
-<br />
 <!--/////////////////////////////////////////////////Boton Buscar/////////////////////////////////////////////-->
 <!--Boostrap clases "border"-->
 <div class="border">
